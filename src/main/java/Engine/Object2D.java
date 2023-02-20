@@ -20,16 +20,18 @@ public class Object2D extends ShaderProgram {
     Vector4f color;
     UniformsMap uniformsMap;
 
-    public Object2D(List<ShaderModuleData> shaderModuleDataList, List<Vector3f> vertices, Vector4f color)
+    public Object2D(List<ShaderModuleData> shaderModuleDataList, List<Vector3f> vertices,
+                    Vector4f color)
     {
         super(shaderModuleDataList);
         this.vertices = vertices;
         this.color = color;
-        setupVAOVBOWithVerticeColor();
+        setupVAOVBO();
         uniformsMap = new UniformsMap(getProgramId());
         uniformsMap.createUniform("uni_color");
     }
-    public Object2D(List<ShaderModuleData> shaderModuleDataList, List<Vector3f> vertices, List<Vector3f> verticesColor)
+    public Object2D(List<ShaderModuleData> shaderModuleDataList, List<Vector3f> vertices,
+                    List<Vector3f> verticesColor)
     {
         super(shaderModuleDataList);
         this.vertices = vertices;
