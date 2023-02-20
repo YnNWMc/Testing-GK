@@ -2,6 +2,7 @@ import Engine.Object2D;
 import Engine.ShaderProgram;
 import Engine.Window;
 import org.joml.Vector3f;
+import org.joml.Vector4f;
 import org.lwjgl.opengl.GL;
 
 import java.util.ArrayList;
@@ -29,12 +30,14 @@ public class Main {
         GL.createCapabilities();
         // code dst jangan ditaruh diatas code diatas
         //
+
+        /*
         objects.add(new Object2D(
                         Arrays.asList(
                                 new ShaderProgram.ShaderModuleData(
-                                        "resources/shaders/scene.vert", GL_VERTEX_SHADER),
+                                        "C:\\File Coding InteliJ JAVA\\Grafika Komputer\\Pert2\\Main\\resources\\shaders/scene.vert", GL_VERTEX_SHADER),
                                 new ShaderProgram.ShaderModuleData(
-                                        "resources/shaders/scene.frag", GL_FRAGMENT_SHADER)
+                                        "C:\\File Coding InteliJ JAVA\\Grafika Komputer\\Pert2\\Main\\resources\\shaders/scene.frag", GL_FRAGMENT_SHADER)
                         ),
                         new ArrayList<>(
                                 List.of(
@@ -42,18 +45,49 @@ public class Main {
                                         new Vector3f(-0.5f, -0.5f, 0.0f),
                                         new Vector3f(0.5f, -0.5f, 0.0f)
                                 )
-                        )
+                        ),
+                        new ArrayList<>(
+                        List.of(
+                                new Vector3f(1.0f,0.0f,0.0f),
+                                new Vector3f(0.0f,1.0f,0.0f),
+                                new Vector3f(0.0f,0.0f,1.0f)
                 )
+                )
+        ));
+        }
+         */
+        objects.add(new Object2D(
+                        Arrays.asList(
+                                new ShaderProgram.ShaderModuleData(
+                                        "C:\\File Coding InteliJ JAVA\\Grafika Komputer\\Pert2\\Main\\resources\\shaders/sceneWithVerticesColor.vert", GL_VERTEX_SHADER),
+                                new ShaderProgram.ShaderModuleData(
+                                        "C:\\File Coding InteliJ JAVA\\Grafika Komputer\\Pert2\\Main\\resources\\shaders/sceneWithVerticesColor.frag", GL_FRAGMENT_SHADER)
+                        ),
+                        new ArrayList<>(
+                                List.of(
+                                        new Vector3f(0.0f, 0.5f, 0.0f),
+                                        new Vector3f(-0.5f, -0.5f, 0.0f),
+                                        new Vector3f(0.5f, -0.5f, 0.0f)
+                                )
+                        ),
+                        new ArrayList<>(
+                        List.of(
+                                new Vector3f(1.0f,0.0f,0.0f),
+                                new Vector3f(0.0f,1.0f,0.0f),
+                                new Vector3f(0.0f,0.0f,1.0f)
+                )
+                )
+        )
         );
         }
     public void loop(){
         while (window.isOpen()){
             window.update();
-            glClearColor(0.70f,0.0f,1.0f,1.0f); // RapidTables.com (RGB color code chart)
+            glClearColor(0.00f,0.0f,0.0f,0.0f); // RapidTables.com (RGB color code chart)
             GL.createCapabilities();
             for (Object2D object2d : objects)
             {
-                object2d.draw();
+                object2d.drawWithVerticeColor();
             }
             //Restore State
             glDisableVertexAttribArray(0);
