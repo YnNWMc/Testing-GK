@@ -28,7 +28,9 @@ public class Rectangle extends Object2D{
         drawSetup();
         // Draw vertices
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);
-        glDrawElements(GL_TRIANGLES, index.size(), GL_UNSIGNED_INT, 0);
+        glDrawElements(GL_TRIANGLE_FAN, index.size(), GL_UNSIGNED_INT, 0);
+        // GL_TRIANGLES & TRIANGLE_FAN nutup sendiri saat sudah ada 3 titik, dan sudah ada 2 garis
+
     }
 
 }

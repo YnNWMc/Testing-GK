@@ -40,10 +40,10 @@ public class Main {
                 Arrays.asList(
                         //shaderFile lokasi menyesuaikan objectnya
                         new ShaderProgram.ShaderModuleData
-                                ("C:\\File Coding InteliJ JAVA\\Grafika Komputer\\Pert2\\Main\\resources\\shaders/scene.vert"
+                                ("C:\\File Coding InteliJ JAVA\\Grafika Komputer\\GrafKom-Yan\\Main\\resources\\shaders/scene.vert"
                                         , GL_VERTEX_SHADER),
                         new ShaderProgram.ShaderModuleData
-                                ("C:\\File Coding InteliJ JAVA\\Grafika Komputer\\Pert2\\Main\\resources\\shaders/scene.frag"
+                                ("C:\\File Coding InteliJ JAVA\\Grafika Komputer\\GrafKom-Yan\\Main\\resources\\shaders/scene.frag"
                                         , GL_FRAGMENT_SHADER)
                 ),
                 new ArrayList<>(
@@ -63,9 +63,9 @@ public class Main {
         objectsRect.add(new Rectangle(
                         Arrays.asList(
                                 new ShaderProgram.ShaderModuleData(
-                                        "C:\\File Coding InteliJ JAVA\\Grafika Komputer\\Pert2\\Main\\resources\\shaders/scene.vert", GL_VERTEX_SHADER),
+                                        "C:\\File Coding InteliJ JAVA\\Grafika Komputer\\GrafKom-Yan\\Main\\resources\\shaders/scene.vert", GL_VERTEX_SHADER),
                                 new ShaderProgram.ShaderModuleData(
-                                        "C:\\File Coding InteliJ JAVA\\Grafika Komputer\\Pert2\\Main\\resources\\shaders/scene.frag", GL_FRAGMENT_SHADER)
+                                        "C:\\File Coding InteliJ JAVA\\Grafika Komputer\\GrafKom-Yan\\Main\\resources\\shaders/scene.frag", GL_FRAGMENT_SHADER)
                         ),
                         new ArrayList<>(
                                 List.of(
@@ -85,10 +85,10 @@ public class Main {
                 Arrays.asList(
                         //shaderFile lokasi menyesuaikan objectnya
                         new ShaderProgram.ShaderModuleData
-                                ("C:\\File Coding InteliJ JAVA\\Grafika Komputer\\Pert2\\Main\\resources\\shaders/scene.vert"
+                                ("C:\\File Coding InteliJ JAVA\\Grafika Komputer\\GrafKom-Yan\\Main\\resources\\shaders/scene.vert"
                                         , GL_VERTEX_SHADER),
                         new ShaderProgram.ShaderModuleData
-                                ("C:\\File Coding InteliJ JAVA\\Grafika Komputer\\Pert2\\Main\\resources\\shaders/scene.frag"
+                                ("C:\\File Coding InteliJ JAVA\\Grafika Komputer\\GrafKom-Yan\\Main\\resources\\shaders/scene.frag"
                                         , GL_FRAGMENT_SHADER)
                 ),
                 new ArrayList<>(
@@ -99,7 +99,7 @@ public class Main {
                                 new Vector3f(0.65f,-0.6f,0.0f) //Bot Right
 
                         )
-                ), new Vector4f(1.0f,0.5f,0.0f,1.0f),
+                ), new Vector4f(0.6f,0.3f,0.0f,1.0f),
                 Arrays.asList(0,1,2,0,2,3)
         ));
         // Atap
@@ -107,10 +107,10 @@ public class Main {
                 Arrays.asList(
                         //shaderFile lokasi menyesuaikan objectnya
                         new ShaderProgram.ShaderModuleData
-                                ("C:\\File Coding InteliJ JAVA\\Grafika Komputer\\Pert2\\Main\\resources\\shaders/scene.vert"
+                                ("C:\\File Coding InteliJ JAVA\\Grafika Komputer\\GrafKom-Yan\\Main\\resources\\shaders/scene.vert"
                                         , GL_VERTEX_SHADER),
                         new ShaderProgram.ShaderModuleData
-                                ("C:\\File Coding InteliJ JAVA\\Grafika Komputer\\Pert2\\Main\\resources\\shaders/scene.frag"
+                                ("C:\\File Coding InteliJ JAVA\\Grafika Komputer\\GrafKom-Yan\\Main\\resources\\shaders/scene.frag"
                                         , GL_FRAGMENT_SHADER)
                 ),
                 new ArrayList<>(
@@ -128,9 +128,9 @@ public class Main {
         objectsRect.add(new Rectangle(
                 Arrays.asList(
                         new ShaderProgram.ShaderModuleData(
-                                "C:\\File Coding InteliJ JAVA\\Grafika Komputer\\Pert2\\Main\\resources\\shaders/scene.vert", GL_VERTEX_SHADER),
+                                "C:\\File Coding InteliJ JAVA\\Grafika Komputer\\GrafKom-Yan\\Main\\resources\\shaders/scene.vert", GL_VERTEX_SHADER),
                         new ShaderProgram.ShaderModuleData(
-                                "C:\\File Coding InteliJ JAVA\\Grafika Komputer\\Pert2\\Main\\resources\\shaders/scene.frag", GL_FRAGMENT_SHADER)
+                                "C:\\File Coding InteliJ JAVA\\Grafika Komputer\\GrafKom-Yan\\Main\\resources\\shaders/scene.frag", GL_FRAGMENT_SHADER)
                 ),
                 new ArrayList<>(
                         List.of(
@@ -139,9 +139,45 @@ public class Main {
                                 new Vector3f(-0.65f,-0.2f,0.0f),//Bot Left
                                 new Vector3f(-0.425f,-0.2f,0.0f)// Bot Right
                         )
-                )
-                , new Vector4f(1.0f,0.5f,0.0f,1.0f),
+                ), new Vector4f(0.6f,0.3f,0.0f,1.0f),
                 Arrays.asList(0,3,2)
+        ));
+
+        // Batang Cerobong
+        objectsRect.add(new Rectangle(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "C:\\File Coding InteliJ JAVA\\Grafika Komputer\\GrafKom-Yan\\Main\\resources\\shaders/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "C:\\File Coding InteliJ JAVA\\Grafika Komputer\\GrafKom-Yan\\Main\\resources\\shaders/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(
+                        List.of(
+                                new Vector3f(0.45f,0.375f,0.0f),//Top Right
+                                new Vector3f(0.3f,0.375f,0.0f),//Top Left
+                                new Vector3f(0.3f,0.115f,0.0f),//Bot Left
+                                new Vector3f(0.45f,0.115f,0.0f)// Bot Right
+                        )
+                ), new Vector4f(0.6f,0.3f,0.0f,1.0f),
+                Arrays.asList(0,1,2,0,2,3)
+        ));
+        // Cerobong Asap
+        objectsRect.add(new Rectangle(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData(
+                                "C:\\File Coding InteliJ JAVA\\Grafika Komputer\\GrafKom-Yan\\Main\\resources\\shaders/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData(
+                                "C:\\File Coding InteliJ JAVA\\Grafika Komputer\\GrafKom-Yan\\Main\\resources\\shaders/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(
+                        List.of(
+                                new Vector3f(0.49f,0.4125f,0.0f),//Top Right
+                                new Vector3f(0.26f,0.4125f,0.0f),//Top Left
+                                new Vector3f(0.26f,0.35f,0.0f),//Bot Left
+                                new Vector3f(0.49f,0.35f,0.0f)// Bot Right
+                        )
+                ), new Vector4f(0.6f,0.0f,0.0f,1.0f),
+                Arrays.asList(0,1,2,0,2,3)
         ));
     }
         public void loop() {
